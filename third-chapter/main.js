@@ -1,14 +1,26 @@
 // cycles
-// for(let i = 0 ; i < 3 ; i ++){
-//     console.log(i);
-// }
-
-// while cycle 
+// while cycle
 
 let i = 0;
 
 while (i <= 50) {
   console.log(i);
-  i ++;
+  i++;
 }
+console.log("--------------------------------------");
+// for cycle
 
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+console.log("--------------------------------------");
+
+// information's validation
+let n = Number(prompt("What is N? ")); //
+while (true) {
+  if (n <= 0) {
+    n = Number(prompt("What is N? "));
+  } else {
+    break;
+  }
+}
