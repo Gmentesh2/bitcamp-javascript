@@ -1,25 +1,22 @@
 
 const throwCoin = () => {
+    let insertedAmount = 0;
+    const cost = 50;
 
-    let totalCoinInserted = 0 ;
-    const costOfDrinks = 50;
-
-    while(totalCoinInserted < costOfDrinks){
-        let coin = Number(prompt("Please enter your coin.. "))
-
-        if(coin === 25 || coin === 10 || coin === 5){
-            totalCoinInserted += coin
-            if(totalCoinInserted < costOfDrinks){
-                console.log(`You Entered ${coin} cent and you need plus another ${costOfDrinks - totalCoinInserted} need to buy a drink`)
-            }else{
-                let change = totalCoinInserted - costOfDrinks
-
-                console.log(`You entered ${coin} cent, you will get a drink. Your change is ${change} cent `)
+    while (insertedAmount < cost) {
+        let coin = Number(prompt("Enter your coin (25, 10, 5)"));
+        if (coin === 25 || coin === 10 || coin === 5) {
+            insertedAmount += coin;
+            if (insertedAmount < cost) {
+                console.log(`You used ${coin} and you need to enter another ${cost - insertedAmount} to get a drink.`);
+            } else {
+                const change = insertedAmount - cost;
+                console.log(`You used ${coin} again and you will get a drink soon. Your change is ${change}.`);
             }
-        }else{
-            console.log("Invalid coin, please enter 25, 10 or 5 cent")
+        } else {
+            console.log("Invalid coin, please enter 25, 10, or 5 cents.");
         }
     }
 }
 
-throwCoin()
+throwCoin();

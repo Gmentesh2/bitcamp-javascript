@@ -1,15 +1,14 @@
+
 const deleteVowels = () => {
   const vowels = ['a', 'e', 'i', 'o', 'u'];
-  let input = prompt("Enter desired word: ");
+  let enteredString = prompt("Enter desired word: ");
+  let resultString = ""
 
-  for (let inp of input) {
-    for (let vowel of vowels) {
-      if (inp.toLowerCase() === vowel) {
-        input = input.replace(inp, "");
-      }
+  for(let i = 0; i < enteredString.length; i ++){
+    if(!vowels.includes(enteredString[i].toLowerCase())){
+      resultString += enteredString[i];
     }
   }
-  console.log(input);
-};
-
+  console.log(resultString)
+}
 deleteVowels();
